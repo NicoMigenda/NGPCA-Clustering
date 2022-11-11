@@ -1,59 +1,97 @@
 %% Changes made to the original NGPCA-Algorithm [Möller04]:
 %{
-1. Unit Initialisation:
+1. Learningrate
+    Original: Learningrate based on the assumption of a normal distribution
+    in each dimension [Welsch10] or continuously declining learning rate
+    Now: Adaptive unit specific variance-based larningratecontrol
+2. Potentialfunction
+    Original: Mahalanobis Distance or Normalized Mahalanobis Distance [Hoffmann04]
+    Now: Adaptive volume/radius Mahalanobis Distance
+3. Unit Initialisation:
     Original: Units are initialized on a random data point
     Now: Units are randomly initialized within the input space
-2. Learningrate
-    Original: Learningrate based on the assumption of a normal distribution in each dimension [Welsch10]
-    Now: Adaptive variance-based larningratecontrol
-3. Distancefunction
-    Original: Normalized Mahalanobis Distance [Hoffmann04]
-    Now: Adaptive volume contralable Mahalanobis Distance
 %}
 
 %% Cleaning & Add path
 close all
 clear variables
-addpath('data sets','helperFunctions');
-rng(2)
+addpath('data sets','NGPCA_Functions','Extra_Functions', genpath('Results'));
+% Set seed for reproducability
+rng(0)
 
 %% 0.1: PREALLOCATION AND INITIALIZATION
 [Parameter, units] = Init; 
 %% 1.0 NGPCA
-for loop = 1:Parameter.T  
+for loop = 1:Parameter.N 
      %% 1.1: SET DATASET
-     if loop == 1 || loop == Parameter.Change
+     if loop == 1 && Parameter.plt == 1 || Parameter.Change == loop && Parameter.plt == 1
          [Parameter, units] = set_data_distribution(Parameter,units,loop);
      end
      %% 1.2: DETERMINE UNIT RANKING ORDER
      [Parameter, units] = unit_ranking_order(Parameter,units);
      %% 1.3: UNIT ADAPTATION
-     [Parameter, units,k] = unit_adaptation(Parameter,units,loop);   
-     %% 4: UNIT RESET HEURISTIC   
-%          if( mod(loop, Parameter.t_resetCheck) == 0)   
-%             [minVal, minIndex] = min( Parameter.allAges );
-%             if minVal < 0
-%               [Parameter, units] = unit_reset(Parameter,units,minIndex);
-%             end
-%          end
+     [Parameter, units,k] = unit_adaptation(Parameter,units);   
      %% 0.2: DRAW CURRENT NETWORK STATE
-      if(Parameter.plt == 1 && loop > 0 && mod(loop, Parameter.t_show) == 0)
+     if(Parameter.plt == 1 && loop > 0 && mod(loop, Parameter.t_show) == 0)
         [Parameter, units] = drawupdate(Parameter,units,loop);
-          % Write to the GIF File 
-              frame = getframe(Parameter.handler); 
-              im = frame2im(frame); 
-              [imind,cm] = rgb2ind(im,256); 
-              if loop == Parameter.t_show 
-              %    imwrite(imind,cm, strcat(Parameter.filename(1:2), '_NGPCAGIF.gif'), 'gif', 'Loopcount',inf,'DelayTime',1); 
-              else 
-              %    imwrite(imind,cm,strcat(Parameter.filename(1:2), '_NGPCAGIF.gif'),'gif','WriteMode','append','DelayTime',1); 
-              end 
-              if loop == Parameter.T 
-                  export_fig(strcat('Results\gifs\',string(loop),'_',Parameter.filename(1:2)), '-pdf', '-transparent')
-              end
      end
-     %% 1.4 Testing; only after last training sample
-     if loop == Parameter.T      
-         [deadUnits,nmi] = centroidIndexMeasure(units, Parameter);
+     if loop == Parameter.N
+     %% Testing
+         [DU_score,nmi] = centroidIndexMeasure(units, Parameter);
+     end
+     %% 1.4 Plot purpose
+     for a = 1 : Parameter.M
+        learningrate_plot(loop,a) = units{a}.epsilon;
+        activity_plot(loop,a) = min(units{a}.activity,1);
+        ybarplot(loop,a) = units{a}.y_bar(1);
+        lbarplot(loop,a) = units{a}.l_bar(1);
      end
 end 
+%% Save Plots for Paper 
+pause(0.001)
+name = split(Parameter.filename,".");
+%path_name = strcat('.\Results\paper\', name{1});
+path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
+export_fig(path_name, '-pdf', '-transparent')
+pause(0.001)
+close all
+
+pause(0.001)
+figure;
+plot(learningrate_plot(:,1),'-')
+hold on
+plot(learningrate_plot(:,2),'--')
+plot(learningrate_plot(:,3),'-.')
+plot(learningrate_plot(:,4),'--.')
+plot(learningrate_plot(:,5),':')
+ylabel('$\epsilon$','Interpreter','latex')
+xlabel('Datapoints','Interpreter','latex')
+xlim([0, size(learningrate_plot,1)])
+legend("PCA unit 1", "PCA unit 2", "PCA unit 3", "PCA unit 4", "PCA unit 5")
+name = split(Parameter.filename,".");
+path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
+%path_name = strcat('.\Results\paper\', name{1});
+export_fig(strcat(path_name ,'_lr'), '-pdf', '-transparent')
+pause(0.001)
+close all
+
+pause(0.001)
+figure;
+plot(activity_plot(:,1),'-')
+hold on
+plot(activity_plot(:,2),'--')
+plot(activity_plot(:,3),'-.')
+plot(activity_plot(:,4),'--.')
+plot(activity_plot(:,5),':')
+ylabel('activity $a$','Interpreter','latex')
+xlabel('Datapoints','Interpreter','latex')
+xlim([0, size(activity_plot,1)])
+legend("PCA unit 1", "PCA unit 2", "PCA unit 3", "PCA unit 4", "PCA unit 5",'Location','southeast')
+name = split(Parameter.filename,".");
+%path_name = strcat('.\Results\paper\', name{1});
+path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
+export_fig(strcat(path_name ,'_activity'), '-pdf', '-transparent')
+pause(0.001)
+close all
+
+

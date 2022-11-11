@@ -1,6 +1,0 @@
-set terminal pngcairo size 2092,2048 enhanced font "Verdana,10"
-set size ratio -1
-set output "worms_2.png"
-set style fill  transparent solid 0.40 noborder
-set style circle radius 5
-plot "worms_2.txt" u 1:2 with circles lc rgb "black"

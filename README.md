@@ -21,6 +21,7 @@ Get started by downloading the latest release:
 Within the download you'll find the following directories and files:
 <details>
   <summary>Download contents</summary>
+  ```text
 |-- Extra_Functions/
 |   |-- Init.m
 |   |-- centroidIndexMeasure.m
@@ -238,7 +239,7 @@ Within the download you'll find the following directories and files:
     |-- u1-label.pa
     |-- u1_with_gt.mat
     `-- vortex.m
-
+    ```
 </details>
 
 ## Getting Started

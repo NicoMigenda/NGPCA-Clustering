@@ -19,9 +19,9 @@ Get started by downloading the latest release:
 ## What's included
 
 Within the download you'll find the following directories and files:
+```md
 <details>
     <summary>Download contents</summary>
-    ```md
     |-- Extra_Functions\
     |   |-- Init.m
     |   |-- centroidIndexMeasure.m
@@ -239,8 +239,9 @@ Within the download you'll find the following directories and files:
         |-- u1-label.pa
         |-- u1_with_gt.mat
         `-- vortex.m
-    ```
 </details>
+```
+
 
 ## Getting Started
 

@@ -21,7 +21,7 @@ Get started by downloading the latest release:
 Within the download you'll find the following directories and files:
 <details>
     <summary>Download contents</summary>
-    ```text
+    ```md
     |-- Extra_Functions\
     |   |-- Init.m
     |   |-- centroidIndexMeasure.m

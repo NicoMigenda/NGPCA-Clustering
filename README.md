@@ -252,6 +252,7 @@ The latest release contains all files needed to directly run the algorithm:
 2. Compiling the script will automatically perform NGPCA Clustering on the S1 data set with standard settings
 
 Optional:
+
 3. Open `Extra_Functions\Init.m`
 4. Change the data set to one containted in `data sets\`
 5. Adjust the model parameters (e.g. initial learning rate or activity)

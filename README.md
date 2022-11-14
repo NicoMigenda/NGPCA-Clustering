@@ -22,7 +22,7 @@ Within the download you'll find the following directories and files:
 <details>
     <summary>Download contents</summary>
     ```text
-    |-- Extra_Functions/
+    |-- Extra_Functions\
     |   |-- Init.m
     |   |-- centroidIndexMeasure.m
     |   |-- drawupdate.m
@@ -33,7 +33,7 @@ Within the download you'll find the following directories and files:
     |   |-- plot_ellipse.m
     |   |-- saveNet.m
     |   `-- unitInit.m
-    |-- NGPCA_Functions/
+    |-- NGPCA_Functions\
     |   |-- DOE_DistanceMeasures.m
     |   |-- eforrlsa.m
     |   |-- init_benchmark.m
@@ -49,8 +49,8 @@ Within the download you'll find the following directories and files:
     |   `-- vconstpot.m
     |-- NGPCA_Learningrate.m
     |-- README.md
-    |-- Results/
-    |   |-- V_hard/
+    |-- Results\
+    |   |-- V_hard\
     |   |   |-- a1_with_gt_V_hard_AR.mat
     |   |   |-- a1_with_gt_V_hard_H.mat
     |   |   |-- a1_with_gt_V_hard_N.mat
@@ -119,7 +119,7 @@ Within the download you'll find the following directories and files:
     |   |   |-- u1_with_gt_V_hard_H.mat
     |   |   |-- u1_with_gt_V_hard_N.mat
     |   |   `-- u1_with_gt_V_hard_VRR.mat
-    |   |-- V_soft/
+    |   |-- V_soft\
     |   |   |-- a1_with_gt_V_soft_AR.mat
     |   |   |-- a1_with_gt_V_soft_H.mat
     |   |   |-- a1_with_gt_V_soft_N.mat
@@ -188,14 +188,14 @@ Within the download you'll find the following directories and files:
     |   |   |-- u1_with_gt_V_soft_H.mat
     |   |   |-- u1_with_gt_V_soft_N.mat
     |   |   `-- u1_with_gt_V_soft_VRR.mat
-    |   `-- gif/
+    |   `-- gif\
     |       |-- a1_G_AR_S_V.gif
     |       |-- a3_G_AR_S_V.gif
     |       |-- h3_G_AR_S_V.gif
     |       |-- rl_G_AR_S_V.gif
     |       |-- s1_G_AR_S_V.gif
     |       `-- s4_G_AR_S_V.gif
-    `-- data sets/
+    `-- data sets\
         |-- a1-label.pa
         |-- a1.mat
         |-- a1_with_gt.mat
@@ -243,6 +243,14 @@ Within the download you'll find the following directories and files:
 </details>
 
 ## Getting Started
+
+The latest release contains all files needed to directly run the algorithm:
+
+1. Open `NGPCA_Learningrate.m` in Matlab
+2. 
+3.
+4.
+5.
 
 ## Visualizations
 The following visualizations represent the learning process on selected data sets of the standard clustering benchmark database. For all 4 presented data sets, the *N1-G-V-H-V* learning combination is used.

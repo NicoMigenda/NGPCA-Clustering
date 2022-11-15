@@ -260,39 +260,39 @@ Optional:
 ## Visualizations
 The following visualizations represent the learning process on selected data sets of the standard clustering benchmark database. For all 4 presented data sets, the *N1-G-V-H-V* learning combination is used.
 ### Data set S1
-![N1-G-V-H-V_s1](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s1](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_G_AR_S_V.gif)
 ### Data set S2
-![N1-G-V-H-V_s2](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s2](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s2_G_AR_S_V.gif)
 ### Data set S3
-![N1-G-V-H-V_s3](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s3](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s3_G_AR_S_V.gif)
 ### Data set S4
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s4_G_AR_S_V.gif)
 ### Data set A1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a1_G_AR_S_V.gif)
 ### Data set A2
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a2_G_AR_S_V.gif)
 ### Data set A3
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a3_G_AR_S_V.gif)
 ### Data set U1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/u1_G_AR_S_V.gif)
 ### Data set B1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b1_G_AR_S_V.gif)
 ### Data set B2
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b2_G_AR_S_V.gif)
 ### Data set B3
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b3_G_AR_S_V.gif)
 ### Data set H32
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h32_G_AR_S_V.gif)
 ### Data set H64
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h64_G_AR_S_V.gif)
 ### Data set H128
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h128_G_AR_S_V.gif)
 ### Data set H256
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h256_G_AR_S_V.gif)
 ### Data set H512
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h512_G_AR_S_V.gif)
 ### Data set H1024
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_NGPCAGIF.gif)
+![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h1024_G_AR_S_V.gif)
 
 ## Creators
 

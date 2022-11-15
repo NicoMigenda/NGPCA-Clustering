@@ -23,7 +23,7 @@ Within the download you'll find the following directories and files:
   <summary>Download contents</summary>
 
   ```text
-  |-- Extra_Functions\
+  |-- Extra_Functions
 |   |-- Init.m
 |   |-- centroidIndexMeasure.m
 |   |-- drawupdate.m
@@ -34,7 +34,7 @@ Within the download you'll find the following directories and files:
 |   |-- plot_ellipse.m
 |   |-- saveNet.m
 |   `-- unitInit.m
-|-- NGPCA_Functions\
+|-- NGPCA_Functions
 |   |-- DOE_DistanceMeasures.m
 |   |-- eforrlsa.m
 |   |-- init_benchmark.m
@@ -50,153 +50,25 @@ Within the download you'll find the following directories and files:
 |   `-- vconstpot.m
 |-- NGPCA_Learningrate.m
 |-- README.md
-|-- Results\
-|   |-- V_hard\
-|   |   |-- a1_with_gt_V_hard_AR.mat
-|   |   |-- a1_with_gt_V_hard_H.mat
-|   |   |-- a1_with_gt_V_hard_N.mat
-|   |   |-- a1_with_gt_V_hard_VRR.mat
-|   |   |-- a2_with_gt_V_hard_AR.mat
-|   |   |-- a2_with_gt_V_hard_H.mat
-|   |   |-- a2_with_gt_V_hard_N.mat
-|   |   |-- a2_with_gt_V_hard_VRR.mat
-|   |   |-- a3_with_gt_V_hard_AR.mat
-|   |   |-- a3_with_gt_V_hard_H.mat
-|   |   |-- a3_with_gt_V_hard_N.mat
-|   |   |-- a3_with_gt_V_hard_VRR.mat
-|   |   |-- b1_with_gt_V_hard_AR.mat
-|   |   |-- b1_with_gt_V_hard_H.mat
-|   |   |-- b1_with_gt_V_hard_N.mat
-|   |   |-- b1_with_gt_V_hard_VRR.mat
-|   |   |-- b2_with_gt_V_hard_AR.mat
-|   |   |-- b2_with_gt_V_hard_H.mat
-|   |   |-- b2_with_gt_V_hard_N.mat
-|   |   |-- b2_with_gt_V_hard_VRR.mat
-|   |   |-- b3_with_gt_V_hard_AR.mat
-|   |   |-- b3_with_gt_V_hard_H.mat
-|   |   |-- b3_with_gt_V_hard_N.mat
-|   |   |-- b3_with_gt_V_hard_VRR.mat
-|   |   |-- h1024_with_gt_V_hard_AR.mat
-|   |   |-- h1024_with_gt_V_hard_H.mat
-|   |   |-- h1024_with_gt_V_hard_N.mat
-|   |   |-- h1024_with_gt_V_hard_VRR.mat
-|   |   |-- h128_with_gt_V_hard_AR.mat
-|   |   |-- h128_with_gt_V_hard_H.mat
-|   |   |-- h128_with_gt_V_hard_N.mat
-|   |   |-- h128_with_gt_V_hard_VRR.mat
-|   |   |-- h256_with_gt_V_hard_AR.mat
-|   |   |-- h256_with_gt_V_hard_H.mat
-|   |   |-- h256_with_gt_V_hard_N.mat
-|   |   |-- h256_with_gt_V_hard_VRR.mat
-|   |   |-- h32_with_gt_V_hard_AR.mat
-|   |   |-- h32_with_gt_V_hard_H.mat
-|   |   |-- h32_with_gt_V_hard_N.mat
-|   |   |-- h32_with_gt_V_hard_VRR.mat
-|   |   |-- h512_with_gt_V_hard_AR.mat
-|   |   |-- h512_with_gt_V_hard_H.mat
-|   |   |-- h512_with_gt_V_hard_N.mat
-|   |   |-- h512_with_gt_V_hard_VRR.mat
-|   |   |-- h64_with_gt_V_hard_AR.mat
-|   |   |-- h64_with_gt_V_hard_H.mat
-|   |   |-- h64_with_gt_V_hard_N.mat
-|   |   |-- h64_with_gt_V_hard_VRR.mat
-|   |   |-- s1_with_gt_V_hard_AR.mat
-|   |   |-- s1_with_gt_V_hard_H.mat
-|   |   |-- s1_with_gt_V_hard_N.mat
-|   |   |-- s1_with_gt_V_hard_VRR.mat
-|   |   |-- s2_with_gt_V_hard_AR.mat
-|   |   |-- s2_with_gt_V_hard_H.mat
-|   |   |-- s2_with_gt_V_hard_N.mat
-|   |   |-- s2_with_gt_V_hard_VRR.mat
-|   |   |-- s3_with_gt_V_hard_AR.mat
-|   |   |-- s3_with_gt_V_hard_H.mat
-|   |   |-- s3_with_gt_V_hard_N.mat
-|   |   |-- s3_with_gt_V_hard_VRR.mat
-|   |   |-- s4_with_gt_V_hard_AR.mat
-|   |   |-- s4_with_gt_V_hard_H.mat
-|   |   |-- s4_with_gt_V_hard_N.mat
-|   |   |-- s4_with_gt_V_hard_VRR.mat
-|   |   |-- u1_with_gt_V_hard_AR.mat
-|   |   |-- u1_with_gt_V_hard_H.mat
-|   |   |-- u1_with_gt_V_hard_N.mat
-|   |   `-- u1_with_gt_V_hard_VRR.mat
-|   |-- V_soft\
-|   |   |-- a1_with_gt_V_soft_AR.mat
-|   |   |-- a1_with_gt_V_soft_H.mat
-|   |   |-- a1_with_gt_V_soft_N.mat
-|   |   |-- a1_with_gt_V_soft_VRR.mat
-|   |   |-- a2_with_gt_V_soft_AR.mat
-|   |   |-- a2_with_gt_V_soft_H.mat
-|   |   |-- a2_with_gt_V_soft_N.mat
-|   |   |-- a2_with_gt_V_soft_VRR.mat
-|   |   |-- a3_with_gt_V_soft_AR.mat
-|   |   |-- a3_with_gt_V_soft_H.mat
-|   |   |-- a3_with_gt_V_soft_N.mat
-|   |   |-- a3_with_gt_V_soft_VRR.mat
-|   |   |-- b1_with_gt_V_soft_AR.mat
-|   |   |-- b1_with_gt_V_soft_H.mat
-|   |   |-- b1_with_gt_V_soft_N.mat
-|   |   |-- b1_with_gt_V_soft_VRR.mat
-|   |   |-- b2_with_gt_V_soft_AR.mat
-|   |   |-- b2_with_gt_V_soft_H.mat
-|   |   |-- b2_with_gt_V_soft_N.mat
-|   |   |-- b2_with_gt_V_soft_VRR.mat
-|   |   |-- b3_with_gt_V_soft_AR.mat
-|   |   |-- b3_with_gt_V_soft_H.mat
-|   |   |-- b3_with_gt_V_soft_N.mat
-|   |   |-- b3_with_gt_V_soft_VRR.mat
-|   |   |-- h1024_with_gt_V_soft_AR.mat
-|   |   |-- h1024_with_gt_V_soft_H.mat
-|   |   |-- h1024_with_gt_V_soft_N.mat
-|   |   |-- h1024_with_gt_V_soft_VRR.mat
-|   |   |-- h128_with_gt_V_soft_AR.mat
-|   |   |-- h128_with_gt_V_soft_H.mat
-|   |   |-- h128_with_gt_V_soft_N.mat
-|   |   |-- h128_with_gt_V_soft_VRR.mat
-|   |   |-- h256_with_gt_V_soft_AR.mat
-|   |   |-- h256_with_gt_V_soft_H.mat
-|   |   |-- h256_with_gt_V_soft_N.mat
-|   |   |-- h256_with_gt_V_soft_VRR.mat
-|   |   |-- h32_with_gt_V_soft_AR.mat
-|   |   |-- h32_with_gt_V_soft_H.mat
-|   |   |-- h32_with_gt_V_soft_N.mat
-|   |   |-- h32_with_gt_V_soft_VRR.mat
-|   |   |-- h512_with_gt_V_soft_AR.mat
-|   |   |-- h512_with_gt_V_soft_H.mat
-|   |   |-- h512_with_gt_V_soft_N.mat
-|   |   |-- h512_with_gt_V_soft_VRR.mat
-|   |   |-- h64_with_gt_V_soft_AR.mat
-|   |   |-- h64_with_gt_V_soft_H.mat
-|   |   |-- h64_with_gt_V_soft_N.mat
-|   |   |-- h64_with_gt_V_soft_VRR.mat
-|   |   |-- s1_with_gt_V_soft_AR.mat
-|   |   |-- s1_with_gt_V_soft_H.mat
-|   |   |-- s1_with_gt_V_soft_N.mat
-|   |   |-- s1_with_gt_V_soft_VRR.mat
-|   |   |-- s2_with_gt_V_soft_AR.mat
-|   |   |-- s2_with_gt_V_soft_H.mat
-|   |   |-- s2_with_gt_V_soft_N.mat
-|   |   |-- s2_with_gt_V_soft_VRR.mat
-|   |   |-- s3_with_gt_V_soft_AR.mat
-|   |   |-- s3_with_gt_V_soft_H.mat
-|   |   |-- s3_with_gt_V_soft_N.mat
-|   |   |-- s3_with_gt_V_soft_VRR.mat
-|   |   |-- s4_with_gt_V_soft_AR.mat
-|   |   |-- s4_with_gt_V_soft_H.mat
-|   |   |-- s4_with_gt_V_soft_N.mat
-|   |   |-- s4_with_gt_V_soft_VRR.mat
-|   |   |-- u1_with_gt_V_soft_AR.mat
-|   |   |-- u1_with_gt_V_soft_H.mat
-|   |   |-- u1_with_gt_V_soft_N.mat
-|   |   `-- u1_with_gt_V_soft_VRR.mat
-|   `-- gif\
+|-- Results
+|   `-- gif
 |       |-- a1_G_AR_S_V.gif
+|       |-- a2_G_AR_S_V.gif
 |       |-- a3_G_AR_S_V.gif
+|       |-- b1_G_AR_S_V.gif
+|       |-- b2_G_AR_S_V.gif
+|       |-- b3_G_AR_S_V.gif
+|       |-- h1_G_AR_S_V.gif
+|       |-- h2_G_AR_S_V.gif
 |       |-- h3_G_AR_S_V.gif
-|       |-- rl_G_AR_S_V.gif
+|       |-- h5_G_AR_S_V.gif
+|       |-- h6_G_AR_S_V.gif
 |       |-- s1_G_AR_S_V.gif
-|       `-- s4_G_AR_S_V.gif
-`-- data sets\
+|       |-- s2_G_AR_S_V.gif
+|       |-- s3_G_AR_S_V.gif
+|       |-- s4_G_AR_S_V.gif
+|       `-- u1_G_AR_S_V.gif
+`-- data sets
     |-- a1-label.pa
     |-- a1.mat
     |-- a1_with_gt.mat

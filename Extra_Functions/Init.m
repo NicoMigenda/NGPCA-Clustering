@@ -1,11 +1,11 @@
 function [Parameter,units] = Init
 
 %% Load Data Set
-Parameter.filename = 's4_with_gt.mat';
+Parameter.filename = 's1_with_gt.mat';
 load(Parameter.filename,'data','gt');
 Parameter.shape = data;
-Parameter.GT = gt; % center
-Parameter.pa = 's4-label.pa';
+Parameter.GT = gt;
+Parameter.pa = 's1-label.pa';
 
 %Parameter.filename = 's1_with_gt.mat';
 %load(Parameter.filename,'data','gt');
@@ -49,7 +49,7 @@ Parameter.rmax = 200;
 %% Plot Parameter
 Parameter.plt = 1;
 Parameter.t_show = 100;
-Parameter.makeGIF = 1; % Requires plt to be 1 
+Parameter.makeGIF = 0; % Requires plt to be 1 
 
 %-------------------------------------------------------------------------%
 % MEMORY ALLOCATION                                                       %

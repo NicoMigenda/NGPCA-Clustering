@@ -17,7 +17,7 @@ close all
 clear variables
 addpath('data sets','NGPCA_Functions','Extra_Functions', genpath('Results'));
 % Set seed for reproducability
-rng(0)
+rng(1)
 
 %% 0.1: PREALLOCATION AND INITIALIZATION
 [Parameter, units] = Init; 
@@ -37,7 +37,8 @@ for loop = 1:Parameter.N
      end
      if loop == Parameter.N
      %% Testing
-         [DU_score,nmi] = centroidIndexMeasure(units, Parameter);
+         CI = centroidIndexMeasure(units, Parameter);
+         [DU_score,nmi] = NMI_DU(units, Parameter);
      end
      %% 1.4 Plot purpose
      for a = 1 : Parameter.M
@@ -47,15 +48,7 @@ for loop = 1:Parameter.N
         lbarplot(loop,a) = units{a}.l_bar(1);
      end
 end 
-%% Save Plots for Paper 
-pause(0.001)
-name = split(Parameter.filename,".");
-%path_name = strcat('.\Results\paper\', name{1});
-path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
-export_fig(path_name, '-pdf', '-transparent')
-pause(0.001)
-close all
-
+%% Plots for Paper 
 pause(0.001)
 figure;
 plot(learningrate_plot(:,1),'-')
@@ -68,14 +61,8 @@ ylabel('$\epsilon$','Interpreter','latex')
 xlabel('Datapoints','Interpreter','latex')
 xlim([0, size(learningrate_plot,1)])
 legend("PCA unit 1", "PCA unit 2", "PCA unit 3", "PCA unit 4", "PCA unit 5")
-name = split(Parameter.filename,".");
-path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
-%path_name = strcat('.\Results\paper\', name{1});
-export_fig(strcat(path_name ,'_lr'), '-pdf', '-transparent')
 pause(0.001)
-close all
 
-pause(0.001)
 figure;
 plot(activity_plot(:,1),'-')
 hold on
@@ -83,15 +70,7 @@ plot(activity_plot(:,2),'--')
 plot(activity_plot(:,3),'-.')
 plot(activity_plot(:,4),'--.')
 plot(activity_plot(:,5),':')
-ylabel('activity $a$','Interpreter','latex')
+ylabel('activity','Interpreter','latex')
 xlabel('Datapoints','Interpreter','latex')
 xlim([0, size(activity_plot,1)])
 legend("PCA unit 1", "PCA unit 2", "PCA unit 3", "PCA unit 4", "PCA unit 5",'Location','southeast')
-name = split(Parameter.filename,".");
-%path_name = strcat('.\Results\paper\', name{1});
-path_name = strcat('.\Results\paper\', strcat(name{1},"_activity_", string(Parameter.activity), "_learningrate_", string(Parameter.epsilon_init)));
-export_fig(strcat(path_name ,'_activity'), '-pdf', '-transparent')
-pause(0.001)
-close all
-
-

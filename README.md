@@ -1,5 +1,6 @@
-<h3 align="center">NGPCA Clustering</h3>
-Local PCA Clustering for streaming and high-dimensional data distributions.
+<h3 align="center">NGPCA: Clustering high-dimensional and non-stationary data streams</h3>
+Local PCA Clustering for streaming and high-dimensional data distributions. 
+This repo serves to reproduce the results from the publication: Adaptive local Principal Component Analysis improves the clustering of high-dimensional data.
 Please cite this code using the following DOI: https://doi.org/10.1016/j.patcog.2023.110030
 
 # Table of contents

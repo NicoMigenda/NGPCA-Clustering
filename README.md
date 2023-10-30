@@ -30,22 +30,10 @@ Within the download you'll find the following directories and files:
 |-- README.md
 |-- Results
 |   `-- gif
-|       |-- a1_G_AR_S_V.gif
-|       |-- a2_G_AR_S_V.gif
-|       |-- a3_G_AR_S_V.gif
-|       |-- b1_G_AR_S_V.gif
-|       |-- b2_G_AR_S_V.gif
-|       |-- b3_G_AR_S_V.gif
-|       |-- h1_G_AR_S_V.gif
-|       |-- h2_G_AR_S_V.gif
-|       |-- h3_G_AR_S_V.gif
-|       |-- h5_G_AR_S_V.gif
-|       |-- h6_G_AR_S_V.gif
 |       |-- s1_G_AR_S_V.gif
 |       |-- s2_G_AR_S_V.gif
 |       |-- s3_G_AR_S_V.gif
 |       |-- s4_G_AR_S_V.gif
-|       `-- u1_G_AR_S_V.gif
 |-- data_sets_combined
 |   |-- a1.mat
 |   |-- a2.mat
@@ -100,32 +88,6 @@ The following visualizations represent the learning process on selected data set
 ![N1-G-V-H-V_s3](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s3_G_AR_S_V.gif)
 ### Data set S4
 ![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s4_G_AR_S_V.gif)
-### Data set A1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a1_G_AR_S_V.gif)
-### Data set A2
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a2_G_AR_S_V.gif)
-### Data set A3
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/a3_G_AR_S_V.gif)
-### Data set U1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/u1_G_AR_S_V.gif)
-### Data set B1
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b1_G_AR_S_V.gif)
-### Data set B2
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b2_G_AR_S_V.gif)
-### Data set B3
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/b3_G_AR_S_V.gif)
-### Data set H32
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h32_G_AR_S_V.gif)
-### Data set H64
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h64_G_AR_S_V.gif)
-### Data set H128
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h128_G_AR_S_V.gif)
-### Data set H256
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h256_G_AR_S_V.gif)
-### Data set H512
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h512_G_AR_S_V.gif)
-### Data set H1024
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/h1024_G_AR_S_V.gif)
 
 ## Creators
 

@@ -1,5 +1,6 @@
 <h3 align="center">NGPCA Clustering</h3>
 Local PCA Clustering for streaming and high-dimensional data distributions.
+Please cite this code using the following DOI: https://doi.org/10.1016/j.patcog.2023.110030
 
 # Table of contents
 - [Quick start](#quick-start)
@@ -23,32 +24,8 @@ Within the download you'll find the following directories and files:
   <summary>Download contents</summary>
 
   ```text
-  |-- Extra_Functions
-|   |-- Init.m
-|   |-- centroidIndexMeasure.m
-|   |-- drawupdate.m
-|   |-- makegif.m
-|   |-- memAloc.m
-|   |-- normalizedmi.m
-|   |-- pickDataset.m
-|   |-- plot_ellipse.m
-|   |-- saveNet.m
-|   `-- unitInit.m
-|-- NGPCA_Functions
-|   |-- DOE_DistanceMeasures.m
-|   |-- eforrlsa.m
-|   |-- init_benchmark.m
-|   |-- normalizedmi.m
-|   |-- pickDataset.m
-|   |-- plot_ellipse.m
-|   |-- potentialFunctions.m
-|   |-- saveNet.m
-|   |-- set_data_distribution.m
-|   |-- unit_adaptation.m
-|   |-- unit_ranking_order.m
-|   |-- vconstTest.m
-|   `-- vconstpot.m
-|-- NGPCA_Learningrate.m
+  |-- Example.m
+|-- Example_Live.mlx
 |-- README.md
 |-- Results
 |   `-- gif
@@ -68,50 +45,33 @@ Within the download you'll find the following directories and files:
 |       |-- s3_G_AR_S_V.gif
 |       |-- s4_G_AR_S_V.gif
 |       `-- u1_G_AR_S_V.gif
-`-- data sets
-    |-- a1-label.pa
-    |-- a1.mat
-    |-- a1_with_gt.mat
-    |-- a2-label.pa
-    |-- a2.mat
-    |-- a2_with_gt.mat
-    |-- a3-label.pa
-    |-- a3.mat
-    |-- a3_with_gt.mat
-    |-- b1-label.pa
-    |-- b1_with_gt.mat
-    |-- b2-label.pa
-    |-- b2_with_gt.mat
-    |-- b3_with_gt.mat
-    |-- gaussian.mat
-    |-- h1024-label.pa
-    |-- h1024_with_gt.mat
-    |-- h128-label.pa
-    |-- h128_with_gt.mat
-    |-- h256-label.pa
-    |-- h256_with_gt.mat
-    |-- h32-label.pa
-    |-- h32_with_gt.mat
-    |-- h512-label.pa
-    |-- h512_with_gt.mat
-    |-- h64-label.pa
-    |-- h64_with_gt.mat
-    |-- rls.mat
-    |-- s1-label.pa
-    |-- s1.mat
-    |-- s1_with_gt.mat
-    |-- s2-label.pa
-    |-- s2.mat
-    |-- s2_with_gt.mat
-    |-- s3-label.pa
-    |-- s3.mat
-    |-- s3_with_gt.mat
-    |-- s4-label.pa
-    |-- s4.mat
-    |-- s4_with_gt.mat
-    |-- u1-label.pa
-    |-- u1_with_gt.mat
-    `-- vortex.m
+|-- data_sets_combined
+|   |-- a1.mat
+|   |-- a2.mat
+|   |-- a3.mat
+|   |-- b1.mat
+|   |-- b2.mat
+|   |-- h128.mat
+|   |-- h256.mat
+|   |-- h32.mat
+|   |-- h512.mat
+|   |-- h64.mat
+|   |-- s1.mat
+|   |-- s2.mat
+|   |-- s3.mat
+|   |-- s4.mat
+|   `-- u1.mat
+`-- ngpca
+    |-- NGPCA.m
+    |-- drawunits.m
+    |-- eforrlsa.m
+    |-- init.m
+    |-- normalizedmi.m
+    |-- plot_ellipse.m
+    |-- potentialFunction.m
+    |-- update.m
+    |-- validate_CI.m
+    `-- validate_NMI_DU.m
   ```
 </details>
 

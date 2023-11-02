@@ -24,6 +24,7 @@ classdef NGPCA
         filename          % Filename
         data              % Data 
         initialized       % Bool variable to only initialize the model once
+        dataDimensionality % Data dimensionality set to the size of input data
     end
 
     methods
@@ -117,6 +118,7 @@ classdef NGPCA
                 if size(obj.data,2) < 2
                     error('Invalid input size.')
                 end 
+                obj.dataDimensionality = size(obj.data,2);
                 obj = init(obj);
             end
             obj = update(obj);
@@ -149,6 +151,7 @@ classdef NGPCA
                 if size(obj.data,2) < 2
                     error('Invalid input size.')
                 end
+                obj.dataDimensionality = size(obj.data,2);
                 obj = init(obj);
             end
             for i = 1 : obj.iterations

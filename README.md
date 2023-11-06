@@ -3,6 +3,8 @@ Local PCA Clustering for streaming and high-dimensional data distributions.
 This repo serves to reproduce the results from the publication: Adaptive local Principal Component Analysis improves the clustering of high-dimensional data.
 Please cite this code using the following DOI: https://doi.org/10.1016/j.patcog.2023.110030
 
+[![View NGPCA: Neural Gas Principal Component Analysis on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/154316-ngpca-neural-gas-principal-component-analysis)
+
 # Table of contents
 - [Quick start](#quick-start)
 - [What's included](#whats-included)
@@ -25,32 +27,18 @@ Within the download you'll find the following directories and files:
   <summary>Download contents</summary>
 
   ```text
-  |-- Example.m
-|-- Example_Live.mlx
-|-- README.md
-|-- Results
-|   `-- gif
-|       |-- s1_G_AR_S_V.gif
-|       |-- s2_G_AR_S_V.gif
-|       |-- s3_G_AR_S_V.gif
-|       |-- s4_G_AR_S_V.gif
-|-- data_sets_combined
-|   |-- a1.mat
-|   |-- a2.mat
-|   |-- a3.mat
-|   |-- b1.mat
-|   |-- b2.mat
-|   |-- h128.mat
-|   |-- h256.mat
-|   |-- h32.mat
-|   |-- h512.mat
-|   |-- h64.mat
-|   |-- s1.mat
-|   |-- s2.mat
-|   |-- s3.mat
-|   |-- s4.mat
-|   `-- u1.mat
-`-- ngpca
+  |-- Example_stationary.m
+  |-- Example_stationary.mlx
+  |-- README.md
+  |-- Results
+  |   `-- gif
+  |       |-- s1_G_AR_S_V.gif
+  |       |-- s2_G_AR_S_V.gif
+  |       |-- s3_G_AR_S_V.gif
+  |       `-- s4_G_AR_S_V.gif
+  |-- data
+  |   `-- s1.mat
+  `-- ngpca
     |-- NGPCA.m
     |-- drawunits.m
     |-- eforrlsa.m
@@ -61,6 +49,7 @@ Within the download you'll find the following directories and files:
     |-- update.m
     |-- validate_CI.m
     `-- validate_NMI_DU.m
+
   ```
 </details>
 

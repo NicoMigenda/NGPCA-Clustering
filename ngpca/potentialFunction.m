@@ -1,4 +1,4 @@
-function ranking = potentialFunction(unit,dataDimensionality, potentialFunction, rmax)
+function ranking = potentialFunction(unit, dataDimensionality, potentialFunction, rmax)
 
 %% Basisterm that is always considered. For m < n the reconstruction error is added.
 basisTerm = unit.y' * (unit.y ./ unit.eigenvalue);
@@ -13,28 +13,28 @@ end
 %% Desired volume / radius / alpha / beta control
 adaptiveControl = rmax ^ (1 - min(unit.activity,1)); 
 switch potentialFunction
-    % (A)daptive (R)adius
+    % (A)daptive (R)adius according to eq. 33
     case "AR"
         control = adaptiveControl^(-2) * (prod(unit.eigenvalue))^(1/dataDimensionality);
         if unit.m < dataDimensionality
            control = control * lambda_rest^( (dataDimensionality - unit.m) / dataDimensionality);
         end
-    % (N)o Control
+    % (N)o Control according to eq. 23
     case "N"
         control = 1;
-    % (A)djustable (V)olume
+    % (A)djustable (V)olume according to eq. 32
     case "AV"
         control = (adaptiveControl^(-2) * prod(unit.eigenvalue))^(1/dataDimensionality);
         if unit.m < dataDimensionality
           control = control * lambda_rest^( (dataDimensionality - unit.m) / dataDimensionality);
         end
-    % (V)ariable (R)elative (V)olume 
+    % (V)ariable (R)elative (V)olume according to eq. 37
     case "VRV"
         control = adaptiveControl^(-2/dataDimensionality);
-    % (V)ariable (R)elative (R)adius
+    % (V)ariable (R)elative (R)adius according to eq. 38
     case "VRR"
         control = adaptiveControl^(-2);
-    % (H)offmann
+    % (H)offmann according to eq. 24
     case "H"
         %control = sqrt(prod(unit.eigenvalue))^(2/dataDimensionality);
         if unit.m < dataDimensionality

@@ -57,8 +57,8 @@ Within the download you'll find the following directories and files:
 
 The latest release contains all files needed to directly run the algorithm:
 
-1. Open `Example.m` or `Example.mlx` in Matlab
-2. Compiling the script will automatically perform NGPCA Clustering on the S1 data set with standard settings
+1. Open either `Example_dynamic.m` or `Example_stationary.m` in Matlab
+2. Compiling the scripts will automatically perform NGPCA-Clustering on the s1 or ring-line-square + vortex data set or with standard settings
 
 Optional:
 
@@ -69,14 +69,10 @@ Optional:
 
 ## Visualizations
 The following visualizations represent the learning process on selected data sets of the standard clustering benchmark database. For all data sets the default settings are used.
-### Data set S1
-![N1-G-V-H-V_s1](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1_G_AR_S_V.gif)
-### Data set S2
-![N1-G-V-H-V_s2](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s2_G_AR_S_V.gif)
-### Data set S3
-![N1-G-V-H-V_s3](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s3_G_AR_S_V.gif)
-### Data set S4
-![N1-G-V-H-V_s4](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s4_G_AR_S_V.gif)
+### Stationary example: Data set S1
+![s1](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/s1.gif)
+### Non-Starionary example: Ring-Line-Square and Vortex
+![dynamic](https://github.com/NicoMigenda/NGPCA-Clustering/blob/main/Results/gif/dynamic.gif)
 
 ## Creators
 

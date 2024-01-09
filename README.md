@@ -59,8 +59,7 @@ Within the download you'll find the following directories and files:
 
 The latest release contains all files needed to directly run the algorithm:
 
-1.a Open either `Example_dynamic.m` or `Example_stationary.m` in Matlab
-1.b Alternativly use the provided live script versions (.mlx) 
+1 Open either `Example_dynamic.m` or `Example_stationary.m` in Matlab or alternativly use the provided live script versions (.mlx) 
 2. Running the scripts will automatically perform NGPCA-Clustering on the s1 or ring-line-square + vortex data set or with standard settings
 
 Optional:

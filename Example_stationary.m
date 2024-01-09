@@ -63,7 +63,8 @@ scatter(data(:,1), data(:,2),5,'o','MarkerFaceAlpha',.2,'MarkerEdgeAlpha',.2);
 hold on;
 axis equal;
 axis manual;
-ngpca = init_units(ngpca, data, 15, 'iterations', 20000, 'PCADimensionality', 2);
+numUnits = 15;
+ngpca = init_units(ngpca, data, numUnits, 'iterations', 20000, 'PCADimensionality', 2);
 for i = 1:ngpca.iterations
     % Sample a random data point in each iteration
     ngpca = fit_single(ngpca, data(ceil(size(data,1) .* rand), :));
@@ -79,7 +80,8 @@ ngpca = validation(ngpca, 'gt', gt, 'eigenvalues', eigenvalues, 'eigenvectors', 
 % For parameter description see above example for single data point
 % training. 
 ngpca = NGPCA();
-ngpca = init_units(ngpca, data, 15, 'Iterations', 20000, 'PCADimensionality', 2);
+numUnits = 15;
+ngpca = init_units(ngpca, data, numUnits, 'Iterations', 20000, 'PCADimensionality', 2);
 tic;
 ngpca = fit_multiple(ngpca, data);
 toc

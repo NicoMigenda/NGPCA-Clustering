@@ -25,7 +25,8 @@ scatter(data(:,1), data(:,2),5,'o','MarkerFaceAlpha',.2,'MarkerEdgeAlpha',.2);
 hold on;
 axis equal;
 axis manual;
-ngpca = init_units(ngpca, data, 19, 'iterations', 40000, 'PCADimensionality', 2);
+numUnits = 19;
+ngpca = init_units(ngpca, data, numUnits, 'iterations', 40000, 'PCADimensionality', 2);
 for i = 1:ngpca.iterations
     % Sample a random data point in each iteration
     ngpca = fit_single(ngpca, data(ceil(size(data,1) .* rand), :));

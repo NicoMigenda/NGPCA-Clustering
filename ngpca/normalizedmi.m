@@ -1,4 +1,7 @@
 function z = normalizedmi(x, y)
+% Mo Chen (2024). Normalized Mutual Information 
+% (https://www.mathworks.com/matlabcentral/fileexchange/29047-normalized-mutual-information),
+% MATLAB Central File Exchange. Retrieved January 9, 2024.
 % Compute normalized mutual information I(x,y)/sqrt(H(x)*H(y)) of two discrete variables x and y.
 % Input:
 %   x, y: two integer vector of the same length 

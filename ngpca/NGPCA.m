@@ -2,6 +2,9 @@ classdef NGPCA
     properties
         % Optional parameters that are overwritten in Constructor if parsed
         potentialFunction = "AR"    % Defines the potential function used during the ranking process
+                                    % Allowed values: "AR", "H", "N", "AV",
+                                    % "VRV", "VRR" - We refer to our paper
+                                    % for an explanation
         softhard          = 0       % 0 = Softclustering more accurate but slower, 1 = Hardclustering  
         learningRate      = 0.99    % Defines the initial learning rate for all units. 
         activity          = 1.00    % Defines the initial activity for all units  
@@ -23,7 +26,7 @@ classdef NGPCA
         NMI                         % Validation: Normalized Mutual information
         data                        % Data 
         initialized                 % Bool variable to only initialize the model once
-        dataDimensionality          % Data dimensionality set to the size of input data
+        dataDimensionality          % Data dimensionality set to the dimensionality of input data
     end
 
     methods
@@ -75,7 +78,7 @@ classdef NGPCA
                 end
             end
             if size(data,2) < 2
-                error('Invalid input size. Data dimensionality lesser than two.')
+                error('Invalid input size. Data dimensionality lesser than 2.')
             end 
             obj.data = data;
             obj.dataDimensionality = size(obj.data,2);
@@ -87,6 +90,9 @@ classdef NGPCA
         % Train on one data point
         %-------
         function obj = fit_single(obj, data)
+            if size(data,2) < 2
+                error('Invalid input size. Data dimensionality lesser than two.')
+            end
             obj.data = data;
             obj = update(obj);
         end
@@ -138,7 +144,8 @@ classdef NGPCA
             end
             % If eigenvalues, eigenvectors and gt are provided, it is
             % possible to calculate the CI 
-            if any(strcmp(varargin,'eigenvalues')) && any(strcmp(varargin,'gt')) && any(strcmp(varargin,'eigenvectors'))
+            if any(strcmp(varargin,'eigenvalues')) && any(strcmp(varargin,'gt')) ...
+               && any(strcmp(varargin,'eigenvectors'))
                 obj = validate_CI(obj, gt, eigenvalues, eigenvectors);
             end
             % If labels exist, calculate NMI and DU

@@ -13,7 +13,6 @@ function H = plot_ellipse(W, L, Pos)
 DEG2RAD = pi./180.0;
 
 Color     = [0 0 0];
-FaceColor = 'none';
 
 % scale axes
 MajorAxis = L(1).*W(:,1);
@@ -28,12 +27,11 @@ Theta = [0:5:360]' .* DEG2RAD;
 X     = norm(MajorAxis) .* cos(Theta);
 Y     = norm(MinorAxis) .* sin(Theta);
 
-% Rotationsmatrix 
+% Rotationmatrix 
 NX    = Pos(1) + cos(PA).*X - sin(PA).*Y;
 NY    = Pos(2) + sin(PA).*X + cos(PA).*Y;
 
 H1    = plot(NX,NY,'k');
-%set(H1,'EdgeColor',Color,'FaceColor',FaceColor);
 
 % draw axes
 H2 = line([Pos(1); Pos(1) + MajorAxis(1)], [Pos(2); Pos(2) + MajorAxis(2)]);

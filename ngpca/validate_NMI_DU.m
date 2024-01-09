@@ -15,7 +15,7 @@ for z = 1:len
 end
 
 for k = 1:obj.numberUnits
-   frequency(k) = sum(winner == k); % Zuordnung der Datenpunkte zu der jeweiligen Gewinner unit, sum(prop) = 1
+   frequency(k) = sum(winner == k);
 end
 obj.DU = sum(frequency == 0); 
 disp("DU:" + round(obj.DU,2))

@@ -5,7 +5,7 @@ len = size(gt,1);
 winner = zeros(len,1);
 frequency = zeros(len,1);
 for z = 1:len
-    % Take on ground truth cluster center and calculcate the distances to
+    % Take one ground truth cluster center and calculcate the distances to
     % all units given the units eigenvalue and eigenvector
     x = gt(z,:);
     for k = 1:obj.numberUnits
@@ -17,7 +17,7 @@ for z = 1:len
     winner(z) = obj.r(1,1);
 end
 for k = 1:obj.numberUnits
-   frequency(k) = sum(winner == k); % Zuordnung der Datenpunkte zu der jeweiligen Gewinner unit, sum(prop) = 1
+   frequency(k) = sum(winner == k);
 end
 CI_1 = sum(frequency == 0); 
 
@@ -25,7 +25,7 @@ CI_1 = sum(frequency == 0);
 winner = zeros(len,1);
 frequency = zeros(len,1);
 for k = 1:obj.numberUnits
-    % Take on unit center and calculcate the distance to all ground truth
+    % Take one unit center and calculcate the distance to all ground truth
     % centers given the eigenvalue and eigenvector of the respective ground
     % truth cluster
     x = obj.units{k}.center;
@@ -39,7 +39,7 @@ for k = 1:obj.numberUnits
 end
 
 for k = 1:obj.numberUnits
-   frequency(k) = sum(winner == k); % Zuordnung der Datenpunkte zu der jeweiligen Gewinner unit, sum(prop) = 1
+   frequency(k) = sum(winner == k);
 end
 CI_2 = sum(frequency == 0); 
 

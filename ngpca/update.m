@@ -1,7 +1,7 @@
 function obj = update(obj)
-%-------------------------------------------------------------------------%
-% 1st PART OF MAIN LOOP: DETERMINE UNIT RANKING ORDER                     %
-%-------------------------------------------------------------------------% 
+    %---------------------------------------------------------------------%
+    % 1st PART OF MAIN LOOP: DETERMINE UNIT RANKING ORDER                 %
+    %---------------------------------------------------------------------% 
     % Helper variable that sums up all learning rates to calculate
     % neighborhood after
     DtAllUnits = 0;
@@ -43,7 +43,8 @@ function obj = update(obj)
           % Update activity according to eq. 39
           obj.units{k}.activity = obj.units{k}.activity + a_lowpass;
     
-          % Only update the top placed units
+          % For each unit (sorted by their ranking position) it is checked
+          % wheter the unit should be updatded or not   
           if (h(j) < obj.softhard)
              break;
           end
@@ -51,11 +52,11 @@ function obj = update(obj)
           %% Learning rate control    
           % Our Learning rate according to chapter 5 and eq. 17 - eq. 20
           gamma = obj.units{k}.y.^2 - obj.units{k}.eigenvalue;
-          obj.units{k}.mt = obj.units{k}.mt*(1-a_lowpass) + a_lowpass * gamma;
-          obj.units{k}.y_bar = obj.units{k}.y_bar*(1-a_lowpass) + a_lowpass * obj.units{k}.y.^2;
+          obj.units{k}.gamma_bar = obj.units{k}.gamma_bar*(1-a_lowpass) + a_lowpass * gamma;
+          obj.units{k}.eta_bar = obj.units{k}.eta_bar*(1-a_lowpass) + a_lowpass * obj.units{k}.y.^2;
           obj.units{k}.l_bar = obj.units{k}.l_bar*(1-a_lowpass) + a_lowpass * obj.units{k}.eigenvalue;
-          D = obj.units{k}.mt ./ (obj.units{k}.y_bar + obj.units{k}.l_bar);
-          obj.units{k}.epsilon = sum(abs(D)) / obj.units{k}.m;
+          Gamma = obj.units{k}.gamma_bar ./ (obj.units{k}.eta_bar + obj.units{k}.l_bar);
+          obj.units{k}.epsilon = sum(abs(Gamma)) / obj.units{k}.m;
           
           % helper variable for eq. 16 and eforrlsa
           obj.units{k}.alpha = obj.units{k}.epsilon * h(j);
@@ -68,7 +69,7 @@ function obj = update(obj)
     
           % update residual variance/spread acording to eq. 8 
           if(obj.dataDimensionality ~= obj.units{k}.m)
-              obj.units{k}.sigma = obj.units{k}.sigma + obj.units{k}.alpha * (obj.units{k}.x_c' * obj.units{k}.x_c - obj.units{k}.y' * obj.units{k}.y - obj.units{k}.sigma);
+              obj.units{k}.sigma_sqr = obj.units{k}.sigma_sqr + obj.units{k}.alpha * (obj.units{k}.x_c' * obj.units{k}.x_c - obj.units{k}.y' * obj.units{k}.y - obj.units{k}.sigma_sqr);
           end
     end
     

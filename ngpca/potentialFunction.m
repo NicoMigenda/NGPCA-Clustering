@@ -1,12 +1,14 @@
 function ranking = potentialFunction(unit, dataDimensionality, potentialFunction, rmax)
 
 %% Basisterm that is always considered. For m < n the reconstruction error is added.
+% According to the first additive term of eq. (23)
 basisTerm = unit.y' * (unit.y ./ unit.eigenvalue);
 if unit.m < dataDimensionality
-    lambda_rest = unit.sigma / (dataDimensionality - unit.m);
-    if( lambda_rest <= 0.0 )
+    lambda_rest = unit.sigma_sqr / (dataDimensionality - unit.m);
+    if( lambda_rest <= eps )
         lambda_rest = eps;
     end  
+    % According to eq. (23)
     basisTerm = basisTerm + (1 ./ lambda_rest) * (unit.x_c' * unit.x_c - unit.y' * unit.y);
 end
 
